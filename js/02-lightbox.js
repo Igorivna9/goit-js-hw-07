@@ -19,5 +19,9 @@ const createImg = (items) => {
 const galleryContainer = document.querySelector('.gallery')
 const galleryList = createImg(galleryItems);
 const galleryAdd = galleryContainer.insertAdjacentHTML('beforeend', galleryList);
-galleryContainer = new SimpleLightbox('.gallery a')
+const galleryAlt = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionDelay: 250,
+});
 console.log(galleryAdd);
+console.log(galleryAlt);
